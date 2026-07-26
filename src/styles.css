@@ -1,0 +1,109 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  * {
+    @apply scroll-smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-pura-bg text-pura-black;
+    font-feature-settings: 'kern' 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-garamond font-light tracking-wide;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 bg-pura-black text-pura-white font-inter uppercase text-sm tracking-widest transition-all duration-300 hover:opacity-80;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 border border-pura-black text-pura-black font-inter uppercase text-sm tracking-widest transition-all duration-300 hover:bg-pura-black hover:text-pura-white;
+  }
+
+  .section-breathing {
+    @apply py-20 md:py-32 lg:py-40 px-4 md:px-8 lg:px-16;
+  }
+
+  .text-editorial {
+    @apply text-4xl md:text-5xl lg:text-6xl font-garamond font-light leading-tight tracking-tight;
+  }
+
+  .fade-in {
+    @apply opacity-0 animate-fade-in;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-zoom-in {
+  animation: zoomIn 0.8s ease-out forwards;
+}

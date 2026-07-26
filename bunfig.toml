@@ -1,0 +1,8 @@
+[install]
+backend = "hardlink"
+
+[install.cache]
+dir = "~/.bun/install/cache"
+
+[build]
+root = "src"
